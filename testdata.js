@@ -9,6 +9,6 @@ const testData = {
   unsignedJWT: `eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyLWlkLTIzOTEyOTM4MiIsInJvbGUiOiJhZG1pbiJ9`
 }
 
-testData.signedJWT = `${testData.unsignedJWT}.0Ph7eDWJK__VBMtSh8VTNtt9rkKIHOysLDEZC-VF9VI`
+testData.signedJWT = `${testData.unsignedJWT}.0Ph7eDWJK__VBMtSh8VTNtt9rkKlHOysLDEZC-VF9VI`
 
 module.exports = testData
