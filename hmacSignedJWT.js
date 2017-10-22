@@ -4,9 +4,8 @@ const { generateUnsignedJWT } = require('./unsignedJWT')
 
 function generateHMACSignedJWT({ header, payload }) {
   const unsignedJWT = generateUnsignedJWT({ header, payload })
-  hmac.update(unsignedJWT)
 
-  return `${unsignedJWT}.${hmac.digest('base64')}`
+  return `${unsignedJWT}.${hmac.update(unsignedJWT).digest('base64')}`
 }
 
 module.exports = { generateHMACSignedJWT }
