@@ -6,8 +6,7 @@ function generateHMACSignedJWT({ header, payload }) {
   const unsignedJWT = testData.unsignedJWT
   hmac.update(unsignedJWT)
 
-  // it almost fits!!!!! :)
-  return `${unsignedJWT}.${new Buffer(hmac.digest()).toString('base64')}`
+  return `${unsignedJWT}.${hmac.digest('base64')}`
 }
 
 module.exports = { generateHMACSignedJWT }
